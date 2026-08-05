@@ -10,7 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,8 +19,9 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Lato', 'sans-serif'],
                         serif: ['Playfair Display', 'serif'],
+                        heading: ['Montserrat', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -55,39 +56,91 @@
 </head>
 <body class="font-sans text-gray-800 bg-brand-gray antialiased selection:bg-brand-gold selection:text-brand-navy overflow-x-hidden">
 
-    <!-- Navigation -->
+        <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="flex flex-col">
                         <img src="images/logo.png" alt="Sanjay Realty Logo" class="h-16 w-auto bg-white/90 p-2 rounded">
                     </a>
                 </div>
                 
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">Home</a>
-                    <a href="about.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">Our Story</a>
-                    <a href="properties.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">Global Parcels</a>
-                    <a href="gallery.html" class="text-brand-gold font-medium text-sm tracking-wide transition-colors">Gallery</a>
-                    <a href="contact.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">Contact</a>
+                    <a href="about.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">About Us</a>
+                    
+                    <!-- Properties Dropdown -->
+                    <div class="relative group">
+                        <a href="properties.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors flex items-center">
+                            Properties
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
+                            <div class="py-1">
+                                <a href="available-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Available Projects</a>
+                                <a href="upcoming-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Upcoming Projects</a>
+                                <a href="sold-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Sold Projects</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Dropdown -->
+                    <div class="relative group">
+                        <a href="gallery.html" class="text-brand-gold font-medium text-sm tracking-wide transition-colors flex items-center">
+                            Gallery
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-32 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
+                            <div class="py-1">
+                                <a href="photos.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Photos</a>
+                                <a href="videos.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Videos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">Contact Us</a>
                 </div>
 
+                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-brand-navy border-t border-gray-800">
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-navy border-t border-gray-800 h-screen overflow-y-auto pb-24">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">Home</a>
-                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">Our Story</a>
-                <a href="properties.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">Global Parcels</a>
-                <a href="gallery.html" class="block px-3 py-2 text-brand-gold font-medium">Gallery</a>
-                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">Contact</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">About Us</a>
+                
+                <!-- Properties Mobile (Expanded for simplicity) -->
+                <div class="space-y-1">
+                    <a href="properties.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium flex justify-between items-center">Properties</a>
+                    <div class="pl-6 space-y-1">
+                        <a href="available-projects.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Available Projects</a>
+                        <a href="upcoming-projects.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Upcoming Projects</a>
+                        <a href="sold-projects.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Sold Projects</a>
+                    </div>
+                </div>
+
+                <!-- Gallery Mobile -->
+                <div class="space-y-1">
+                    <a href="gallery.html" class="block px-3 py-2 text-brand-gold font-medium flex justify-between items-center">Gallery</a>
+                    <div class="pl-6 space-y-1">
+                        <a href="photos.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Photos</a>
+                        <a href="videos.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Videos</a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">Contact Us</a>
             </div>
         </div>
     </nav>
@@ -98,7 +151,7 @@
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-gold/10 via-transparent to-transparent"></div>
         
         <div class="relative z-10 text-center px-4 mt-20">
-            <h1 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Gallery</h1>
+            <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Gallery</h1>
             <p class="text-gray-300 text-lg max-w-2xl mx-auto">A visual showcase of our premium global land portfolio.</p>
         </div>
     </div>
@@ -113,7 +166,7 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent opacity-80"></div>
                     <div class="absolute bottom-6 left-6 text-white">
                         <span class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-1 block">Texas, USA</span>
-                        <h3 class="font-serif text-xl font-bold">50-Acre Premium Ranch</h3>
+                        <h3 class="font-heading text-xl font-bold">50-Acre Premium Ranch</h3>
                     </div>
                 </div>
 
@@ -123,7 +176,7 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent opacity-80"></div>
                     <div class="absolute bottom-6 left-6 text-white">
                         <span class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-1 block">Gujarat, India</span>
-                        <h3 class="font-serif text-xl font-bold">Industrial Estate Plot</h3>
+                        <h3 class="font-heading text-xl font-bold">Industrial Estate Plot</h3>
                     </div>
                 </div>
 
@@ -133,7 +186,7 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent opacity-80"></div>
                     <div class="absolute bottom-6 left-6 text-white">
                         <span class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-1 block">Cotswolds, UK</span>
-                        <h3 class="font-serif text-xl font-bold">Countryside Estate</h3>
+                        <h3 class="font-heading text-xl font-bold">Countryside Estate</h3>
                     </div>
                 </div>
 
@@ -143,7 +196,7 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent opacity-80"></div>
                     <div class="absolute bottom-6 left-6 text-white">
                         <span class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-1 block">Maharashtra, India</span>
-                        <h3 class="font-serif text-xl font-bold">Farmhouse Plot</h3>
+                        <h3 class="font-heading text-xl font-bold">Farmhouse Plot</h3>
                     </div>
                 </div>
 
@@ -153,7 +206,7 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent opacity-80"></div>
                     <div class="absolute bottom-6 left-6 text-white">
                         <span class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-1 block">Florida, USA</span>
-                        <h3 class="font-serif text-xl font-bold">Coastal Development Land</h3>
+                        <h3 class="font-heading text-xl font-bold">Coastal Development Land</h3>
                     </div>
                 </div>
 
@@ -163,7 +216,7 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent opacity-80"></div>
                     <div class="absolute bottom-6 left-6 text-white">
                         <span class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-1 block">Outskirts of London, UK</span>
-                        <h3 class="font-serif text-xl font-bold">Commercial Land</h3>
+                        <h3 class="font-heading text-xl font-bold">Commercial Land</h3>
                     </div>
                 </div>
             </div>
@@ -185,56 +238,60 @@
                     </p>
                 </div>
                 
-                <!-- Quick Links -->
+                                <!-- Explore Links -->
                 <div>
-                    <h4 class="font-serif text-xl font-bold mb-6 text-white">Explore</h4>
+                    <h4 class="font-heading text-xl font-bold mb-6 text-white">Explore</h4>
                     <ul class="space-y-3">
-                        <li><a href="properties.html?country=india" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Land in India</a></li>
-                        <li><a href="properties.html?country=usa" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Land in USA</a></li>
-                        <li><a href="properties.html?country=uk" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Land in UK</a></li>
-                        <li><a href="gallery.html" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Gallery</a></li>
-                        <li><a href="about.html" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Our Story</a></li>
+                        <li><a href="available-projects.html" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Available Projects</a></li>
+                        <li><a href="upcoming-projects.html" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Upcoming Projects</a></li>
+                        <li><a href="sold-projects.html" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Sold Projects</a></li>
+                        <li><a href="photos.html" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Photos</a></li>
+                        <li><a href="videos.html" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Videos</a></li>
                     </ul>
                 </div>
-                
-                <!-- Contact Info -->
-                <div class="lg:col-span-2">
-                    <h4 class="font-serif text-xl font-bold mb-6 text-white">Contact Us</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <div class="flex items-start mb-4">
-                                <svg class="w-5 h-5 text-brand-gold mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
-                                <div>
-                                    <h5 class="text-white font-medium text-sm mb-1">Global Headquarters</h5>
-                                    <p class="text-gray-400 text-sm">Ahmedabad, Gujarat,<br>India.</p>
-                                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading text-xl font-bold mb-6 text-white">Quick Link</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-heading text-xl font-bold mb-6 text-white">Contact Us</h4>
+                    <div class="space-y-4">
+                                                <div class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-gold mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <div>
+                                <h5 class="text-white font-medium text-sm mb-1">Global Headquarters</h5>
+                                <p class="text-gray-400 text-sm">Ahmedabad, Gujarat,<br>India.</p>
                             </div>
                         </div>
-                        <div>
-                            <div class="flex items-start mb-4">
-                                <svg class="w-5 h-5 text-brand-gold mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                                <div>
-                                    <h5 class="text-white font-medium text-sm mb-1">Phone</h5>
-                                    <p class="text-gray-400 text-sm">+91 98250 20731<br>+91 98251 57731</p>
-                                </div>
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-gold mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <div>
+                                <h5 class="text-white font-medium text-sm mb-1">Phone</h5>
+                                <p class="text-gray-400 text-sm"><a href="tel:+919825020731" class="hover:text-brand-gold transition-colors">+91 98250 20731</a><br><a href="tel:+919825157731" class="hover:text-brand-gold transition-colors">+91 98251 57731</a></p>
                             </div>
-                            <div class="flex items-start">
-                                <svg class="w-5 h-5 text-brand-gold mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                                <div>
-                                    <h5 class="text-white font-medium text-sm mb-1">Email</h5>
-                                    <p class="text-gray-400 text-sm">propertysolutionsbysanjay@gmail.com</p>
-                                </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-brand-gold mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <div>
+                                <h5 class="text-white font-medium text-sm mb-1">Email</h5>
+                                <p class="text-gray-400 text-sm"><a href="mailto:propertysolutionsbysanjay@gmail.com" class="hover:text-brand-gold transition-colors break-all">propertysolutionsbysanjay@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2026 Sanjay Realty Group. All rights reserved.</p>
                 <div class="flex space-x-6">
                     <a href="privacy-policy.html" class="text-gray-500 hover:text-brand-gold text-sm transition-colors">Privacy Policy</a>
-                    <a href="terms.html" class="text-gray-500 hover:text-brand-gold text-sm transition-colors">Terms of Service</a>
+                    <a href="terms-and-conditions.html" class="text-gray-500 hover:text-brand-gold text-sm transition-colors">Terms and Conditions</a>
                 </div>
             </div>
         </div>
