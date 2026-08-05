@@ -1,160 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Conditions | Sanjay Realty Group</title>
-    <meta name="description" content="Terms of Service of Sanjay Realty Group.">
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Lato', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                        heading: ['Montserrat', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            navy: '#0F172A',
-                            gold: '#D4AF37',
-                            gray: '#F8FAFC',
-                        }
-                    },
-                }
-            }
-        }
-    </script>
-    <style>
-        .glass-nav {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-    </style>
-</head>
-<body class="font-sans text-gray-800 bg-brand-gray antialiased selection:bg-brand-gold selection:text-brand-navy overflow-x-hidden">
-        <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-24">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="flex flex-col">
-                        <img src="images/logo.png" alt="Sanjay Realty Logo" class="h-16 w-auto bg-white/90 p-2 rounded">
-                    </a>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">Home</a>
-                    <a href="about.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">About Us</a>
-                    
-                    <!-- Properties Dropdown -->
-                    <div class="relative group">
-                        <a href="properties.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors flex items-center">
-                            Properties
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </a>
-                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
-                            <div class="py-1">
-                                <a href="available-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Available Projects</a>
-                                <a href="upcoming-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Upcoming Projects</a>
-                                <a href="sold-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Sold Projects</a>
-                            </div>
-                        </div>
-                    </div>
+import glob
+import re
 
-                    <!-- Gallery Dropdown -->
-                    <div class="relative group">
-                        <a href="gallery.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors flex items-center">
-                            Gallery
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </a>
-                        <div class="absolute left-0 mt-2 w-32 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
-                            <div class="py-1">
-                                <a href="photos.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Photos</a>
-                                <a href="videos.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Videos</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="contact.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">Contact Us</a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-brand-navy border-t border-gray-800 h-screen overflow-y-auto pb-24">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">Home</a>
-                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">About Us</a>
-                
-                <!-- Properties Mobile (Expanded for simplicity) -->
-                <div class="space-y-1">
-                    <a href="properties.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium flex justify-between items-center">Properties</a>
-                    <div class="pl-6 space-y-1">
-                        <a href="available-projects.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Available Projects</a>
-                        <a href="upcoming-projects.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Upcoming Projects</a>
-                        <a href="sold-projects.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Sold Projects</a>
-                    </div>
-                </div>
-
-                <!-- Gallery Mobile -->
-                <div class="space-y-1">
-                    <a href="gallery.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium flex justify-between items-center">Gallery</a>
-                    <div class="pl-6 space-y-1">
-                        <a href="photos.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Photos</a>
-                        <a href="videos.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Videos</a>
-                    </div>
-                </div>
-
-                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">Contact Us</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Page Header -->
-    <div class="relative h-[200px] flex items-center justify-center bg-brand-navy">
-        <div class="relative z-10 text-center px-4 mt-20">
-            <h1 class="text-3xl font-heading font-bold text-white mb-4">Terms and Conditions</h1>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="prose prose-lg text-gray-600 max-w-none">
-                <p>Welcome to Sanjay Realty Group. These terms and conditions outline the rules and regulations for the use of our Website.</p>
-                <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">License</h3>
-                <p>Unless otherwise stated, Sanjay Realty Group and/or its licensors own the intellectual property rights for all material on the website. All intellectual property rights are reserved.</p>
-                <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Disclaimer</h3>
-                <p>The materials on Sanjay Realty Group's website are provided on an 'as is' basis. Sanjay Realty Group makes no warranties, expressed or implied, regarding land availability, pricing, or zoning laws across India, USA, and UK. Always consult your legal representative before making any investment.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-        <footer class="footer-wave bg-brand-navy text-white pt-24 pb-12 mt-10 relative overflow-hidden">
+new_footer_html = '''    <footer class="footer-wave bg-brand-navy text-white pt-24 pb-12 mt-10 relative overflow-hidden">
         <!-- Background decorative elements -->
         <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
         <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
@@ -282,6 +129,20 @@
                 </div>
             </div>
         </div>
-    </footer>
-</body>
-</html>
+    </footer>'''
+
+def update_footer():
+    for filepath in glob.glob("*.html"):
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        # The section we want to replace starts at <footer ...> and ends at </footer>
+        pattern = r'<footer[^>]*>.*?</footer>'
+        new_content = re.sub(pattern, new_footer_html, content, flags=re.DOTALL)
+        
+        if new_content != content:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(new_content)
+            print(f"Updated footer in {filepath}")
+
+update_footer()
