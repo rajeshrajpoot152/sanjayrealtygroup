@@ -25,11 +25,12 @@
                     },
                     colors: {
                         brand: {
-                            navy: '#0F172A',     // Primary Dark
-                            gold: '#D4AF37',     // Premium Accent
-                            goldlight: '#F3E5AB', // Light Gold
-                            emerald: '#064E3B',  // Earth/Land vibe
-                            gray: '#F8FAFC',     // Light background
+                            cyan: { DEFAULT: '#27B9F2', dark: '#23B7D9' },
+                            green: { DEFAULT: '#33A665', dark: '#5DA67C' },
+                            dark: { DEFAULT: '#0D0D0D' },
+                            navy: '#001603', 
+                            gold: '#27B9F2',
+                            gray: '#F8FAFC'
                         }
                     },
                     backgroundImage: {
@@ -118,12 +119,27 @@
             background-repeat: no-repeat;
         }
     </style>
+
+    <style>
+        .footer::after {
+            position: absolute;
+            left: 0;
+            bottom: 100%;
+            width: 100%;
+            height: 70px;
+            content: "";
+            z-index: -1;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 100' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C480,100 960,100 1440,0 L1440,100 L0,100 Z' fill='%23001603'/%3E%3C/svg%3E");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body class="font-sans text-gray-800 bg-brand-gray antialiased selection:bg-brand-gold selection:text-brand-navy overflow-x-hidden">
 
         <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
@@ -249,7 +265,7 @@
     <!-- Key Statistics Section -->
     <section class="py-16 bg-brand-navy border-t border-brand-gold/30 relative overflow-hidden">
         <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center opacity-5 mix-blend-overlay"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-x-0 lg:divide-x divide-gray-700">
                 <div class="reveal p-4">
                     <div class="text-4xl md:text-5xl font-bold font-heading text-brand-gold mb-3">500+</div>
@@ -273,7 +289,7 @@
 
     <!-- Global Presence Section -->
     <section class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal">
                 <h2 class="font-heading text-4xl md:text-5xl font-bold text-brand-navy mb-4">Our Global Markets</h2>
                 <div class="w-24 h-1 bg-brand-gold mx-auto mb-6"></div>
@@ -331,7 +347,7 @@
         <!-- Decorative subtle background -->
         <div class="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-gold via-transparent to-transparent"></div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="reveal">
                     <span class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4 block">The Sanjay Advantage</span>
@@ -391,7 +407,7 @@
 
     <!-- NRI Services Section -->
     <section class="py-24 bg-white relative border-y border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal">
                 <span class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4 block">Dedicated Assistance</span>
                 <h2 class="font-heading text-4xl md:text-5xl font-bold text-brand-navy mb-4">Our Services for NRIs</h2>
@@ -457,7 +473,7 @@
 
     <!-- Featured Properties Snippet -->
     <section class="py-24 bg-brand-gray">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
                 <div>
                     <span class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-2 block">Premium Offerings</span>
@@ -537,7 +553,7 @@
 
     <!-- Explore Land Opportunities Section -->
     <section class="py-24 bg-[#0a0a0a] text-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Header -->
             <div class="max-w-3xl mb-16 reveal">
                 <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Explore Land Opportunities Across India, USA & UK</h2>
@@ -669,7 +685,7 @@
 
     <!-- Property Gallery -->
     <section class="py-24 bg-white overflow-hidden border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center reveal">
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center reveal">
             <span class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4 block">Visual Excellence</span>
             <h2 class="font-heading text-4xl md:text-5xl font-bold text-brand-navy mb-4">Property Gallery</h2>
             <div class="w-24 h-1 bg-brand-gold mx-auto mb-6"></div>
@@ -742,13 +758,13 @@
                 animation-play-state: paused;
             }
         </style>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 text-center reveal">
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-4 text-center reveal">
             <span class="inline-block bg-brand-gold/10 text-brand-gold text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Client Success Stories</span>
             <h2 class="font-heading text-4xl md:text-5xl font-bold text-brand-navy mb-4">What Our Clients Say</h2>
             <p class="text-gray-600 max-w-2xl mx-auto text-lg">Read about the experiences of our valued clients and how we've helped them secure prime real estate and commercial properties.</p>
         </div>
 
-        <div class="flex justify-center gap-5 mt-10 sm:mt-12 [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)] max-h-[740px] overflow-hidden max-w-7xl mx-auto px-4">
+        <div class="flex justify-center gap-5 mt-10 sm:mt-12 [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)] max-h-[740px] overflow-hidden max-w-[1536px] mx-auto px-4">
             <!-- Column 1 -->
             <div class="flex-1 max-w-[420px]">
                 <div class="testimonials-scroll flex flex-col gap-5 pb-5">
@@ -1089,7 +1105,7 @@
 
     <!-- Final CTA Section -->
     <section class="py-20 sm:py-28 px-4 sm:px-6 relative reveal">
-      <div class="max-w-7xl mx-auto bg-gradient-to-br from-brand-navy to-[#1a233a] rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(15,23,42,0.3)] relative border border-gray-800">
+      <div class="max-w-[1536px] mx-auto bg-gradient-to-br from-brand-navy to-[#1a233a] rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(15,23,42,0.3)] relative border border-gray-800">
         <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center opacity-20 mix-blend-luminosity"></div>
         <div class="relative p-10 sm:p-24 text-center z-10">
           <h2 class="font-heading font-black text-white leading-tight mb-6" style="font-size:clamp(2.2rem,5vw,4.5rem);">Ready to Secure Your Global Legacy?</h2>
@@ -1103,12 +1119,12 @@
     </section>
 
     <!-- Footer -->
-        <footer class="footer-wave bg-brand-navy text-white pt-24 pb-12 mt-10 relative overflow-hidden">
+            <footer class="footer bg-brand-navy text-white pt-24 pb-12 mt-10 relative">
         <!-- Background decorative elements -->
         <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12 mb-16">
                 <!-- Brand -->
                 <div class="lg:col-span-1 flex flex-col">
@@ -1146,8 +1162,9 @@
                 
                 <!-- Explore Links -->
                 <div>
-                    <h4 class="font-heading text-lg font-bold mb-6 text-white flex items-center">
-                        <span class="w-8 h-1 bg-brand-gold mr-3 rounded-full"></span> Explore
+                    <h4 class="font-heading text-lg font-bold mb-6 text-white">
+                        Explore
+                        <span class="block w-12 h-1 mt-2 rounded-full bg-gradient-to-r from-brand-green to-brand-cyan"></span>
                     </h4>
                     <ul class="space-y-3.5">
                         <li><a href="available-projects.html" class="text-gray-400 hover:text-brand-gold text-sm transition-all hover:translate-x-2 inline-block">Available Projects</a></li>
@@ -1160,8 +1177,9 @@
 
                 <!-- Quick Links -->
                 <div>
-                    <h4 class="font-heading text-lg font-bold mb-6 text-white flex items-center">
-                        <span class="w-8 h-1 bg-brand-gold mr-3 rounded-full"></span> Quick Links
+                    <h4 class="font-heading text-lg font-bold mb-6 text-white">
+                        Quick Links
+                        <span class="block w-12 h-1 mt-2 rounded-full bg-gradient-to-r from-brand-green to-brand-cyan"></span>
                     </h4>
                     <ul class="space-y-3.5">
                         <li><a href="index.html" class="text-gray-400 hover:text-brand-gold text-sm transition-all hover:translate-x-2 inline-block">Home</a></li>
@@ -1172,8 +1190,9 @@
 
                 <!-- Contact Info -->
                 <div>
-                    <h4 class="font-heading text-lg font-bold mb-6 text-white flex items-center">
-                        <span class="w-8 h-1 bg-brand-gold mr-3 rounded-full"></span> Contact Us
+                    <h4 class="font-heading text-lg font-bold mb-6 text-white">
+                        Contact Us
+                        <span class="block w-12 h-1 mt-2 rounded-full bg-gradient-to-r from-brand-green to-brand-cyan"></span>
                     </h4>
                     
                     <!-- Location -->
