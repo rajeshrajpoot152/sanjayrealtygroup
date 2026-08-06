@@ -1,291 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonials | Sanjay Realty</title>
+    <meta name="description" content="Read reviews and success stories from clients who have bought, sold, or resolved property disputes in Ahmedabad with Sanjay Realty.">
+    <link class="icon" href="images/favicon.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#001603', 
+                            gold: '#27B9F2',
+                            gray: '#F8FAFC'
+                        }
+                    },
+                    backgroundImage: {
+                        'footer-wave-dark': "url('data:image/svg+xml,%3Csvg viewBox=\"0 0 1440 100\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\"%3E%3Cpath d=\"M0,0 C480,100 960,100 1440,0 L1440,100 L0,100 Z\" fill=\"%23001603\"/%3E%3C/svg%3E')",
+                        'footer-wave-green': "url('data:image/svg+xml,%3Csvg viewBox=\"0 0 1440 100\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\"%3E%3Cpath d=\"M0,0 C480,100 960,100 1440,0 L1440,100 L0,100 Z\" fill=\"%23001603\"/%3E%3C/svg%3E')",
+                        'hero-pattern': "url('images/land-1.jpg')"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 bg-brand-gray antialiased selection:bg-brand-gold selection:text-brand-navy overflow-x-hidden">
 
-        <!-- Client Testimonials Section -->
-    <section class="py-24 bg-brand-gray overflow-hidden">
-        <style>
-            @keyframes scroll-vertical {
-                from { transform: translateY(0); }
-                to { transform: translateY(-50%); }
-            }
-            @keyframes scroll-vertical-reverse {
-                from { transform: translateY(-50%); }
-                to { transform: translateY(0); }
-            }
-            .testimonials-scroll {
-                animation: scroll-vertical 40s linear infinite;
-            }
-            .testimonials-scroll-reverse {
-                animation: scroll-vertical-reverse 40s linear infinite;
-            }
-            .testimonials-scroll:hover, .testimonials-scroll-reverse:hover {
-                animation-play-state: paused;
-            }
-        </style>
-        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-4 text-center reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0">
-            <span class="inline-block bg-brand-gold/10 text-brand-gold text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Client Success Stories</span>
-            <h2 class="font-heading text-4xl md:text-5xl font-bold text-brand-navy mb-4">What Our Clients Say</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto text-lg">Read about the experiences of our valued clients and how we've helped them secure prime real estate and commercial properties.</p>
-        </div>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-900/85 backdrop-blur-[12px] border-b border-white/10 transition-all duration-300" id="navbar">
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex flex-col">
+                        <img src="images/logo.png" alt="Sanjay Realty Logo" class="h-16 w-auto object-contain">
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">About Us</a>
+                    
+                    <!-- Properties Dropdown -->
+                    <div class="relative group">
+                        <a href="properties.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors flex items-center">
+                            Properties
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
+                            <div class="py-1">
+                                <a href="available-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Available Projects</a>
+                                <a href="upcoming-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Upcoming Projects</a>
+                                <a href="sold-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Sold Projects</a>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="flex justify-center gap-5 mt-10 sm:mt-12 [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)] max-h-[740px] overflow-hidden max-w-[1536px] mx-auto px-4">
-            <!-- Column 1 -->
-            <div class="flex-1 max-w-[420px]">
-                <div class="testimonials-scroll flex flex-col gap-5 pb-5">
-                    <article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"We purchased a prime location Propery in gift city through Sanjay Realty Group. We believe they are the best helpful and most friendly for any kind of property dealing in gift city, Gandhi nagar. Specially Ms. Rima Doshi has been very professional throughout our dealings. We highly recommend this firm to purchase property in gift city."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #10b981 0%, #059669 100%)" aria-hidden="true">SK</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Surinder Kumar</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"I am recommending Sanjay Realty Group after buying multiple properties from them. They are highly professional and reliable real estate advisors. They have great market insight and seamless service throughout the process. Thank you Sanjay Realty Group, GIFT city!!"</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)" aria-hidden="true">CJ</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Chetan Jalan</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"Booked 3 flats through Sanjay Realty Group in Gift City. They are honest, clear and helpful. I would recommend them to anyone looking to buy property. I had a great experience working with them."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #06b6d4 0%, #3E96E4 100%)" aria-hidden="true">BS</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Bhavnish Shah</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"A true professional who made buying our property in GIFT city stress-free and exciting. Guided me through every step, ensuring transparency and satisfaction."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #f97316 0%, #facc15 100%)" aria-hidden="true">PM</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Palak Maithia</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"We purchased a prime location Propery in gift city through Sanjay Realty Group. We believe they are the best helpful and most friendly for any kind of property dealing in gift city, Gandhi nagar. Specially Ms. Rima Doshi has been very professional throughout our dealings. We highly recommend this firm to purchase property in gift city."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #3E96E4 0%, #0FC26A 100%)" aria-hidden="true">SK</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Surinder Kumar</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"I am recommending Sanjay Realty Group after buying multiple properties from them. They are highly professional and reliable real estate advisors. They have great market insight and seamless service throughout the process. Thank you Sanjay Realty Group, GIFT city!!"</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #0F172A 0%, #D4AF37 100%)" aria-hidden="true">CJ</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Chetan Jalan</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"Booked 3 flats through Sanjay Realty Group in Gift City. They are honest, clear and helpful. I would recommend them to anyone looking to buy property. I had a great experience working with them."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #10b981 0%, #059669 100%)" aria-hidden="true">BS</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Bhavnish Shah</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"A true professional who made buying our property in GIFT city stress-free and exciting. Guided me through every step, ensuring transparency and satisfaction."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)" aria-hidden="true">PM</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Palak Maithia</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article>
+                    <!-- Gallery Dropdown -->
+                    <div class="relative group">
+                        <a href="gallery.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors flex items-center">
+                            Gallery
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-32 bg-white rounded-md shadow-lg invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
+                            <div class="py-1">
+                                <a href="photos.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Photos</a>
+                                <a href="videos.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Videos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">Contact Us</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
-            
-            <!-- Column 2 (Hidden on Mobile) -->
-            <div class="hidden md:block flex-1 max-w-[420px]">
-                <div class="testimonials-scroll-reverse flex flex-col gap-5 pb-5">
-                    <article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"Purchased the apartment in GIFT City through Sanjay Realty Group. Got the best deal. Knowledgeable and professional real estate agents for GIFT City, Gandhinagar area."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #3E96E4 0%, #0FC26A 100%)" aria-hidden="true">CP</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Chinkal Parmar</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
         </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"If u r a investor in gandhinagar gift city this is the place to be. they will help u to buy sell or rent any property in gift city. very professional approach towards clients, they guide u in a right direction to buy property. a legit place to be to buy or sell or rent a property."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #0F172A 0%, #D4AF37 100%)" aria-hidden="true">VP</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Vrushant Panchal</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"We purchased a prime location Property in adani santigram and gift city through Sanjay Realty Group. We believe they are the best helpful and most friendly for any kind of property dealing in gift city, Gandhi nagar. Specially Mr.Nitesh trivedi has been very professional throughout our dealings. We highly recommend this firm to purchase property in gift city."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #10b981 0%, #059669 100%)" aria-hidden="true">JS</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Jigar Shukal</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"Sanjay Realty Group owner always very cooperative and giving best response as well as good rate on purchase."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)" aria-hidden="true">PP</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Prakash Patel</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"Purchased the apartment in GIFT City through Sanjay Realty Group. Got the best deal. Knowledgeable and professional real estate agents for GIFT City, Gandhinagar area."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #06b6d4 0%, #3E96E4 100%)" aria-hidden="true">CP</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Chinkal Parmar</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"If u r a investor in gandhinagar gift city this is the place to be. they will help u to buy sell or rent any property in gift city. very professional approach towards clients, they guide u in a right direction to buy property. a legit place to be to buy or sell or rent a property."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #f97316 0%, #facc15 100%)" aria-hidden="true">VP</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Vrushant Panchal</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"We purchased a prime location Property in adani santigram and gift city through Sanjay Realty Group. We believe they are the best helpful and most friendly for any kind of property dealing in gift city, Gandhi nagar. Specially Mr.Nitesh trivedi has been very professional throughout our dealings. We highly recommend this firm to purchase property in gift city."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #3E96E4 0%, #0FC26A 100%)" aria-hidden="true">JS</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Jigar Shukal</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"Sanjay Realty Group owner always very cooperative and giving best response as well as good rate on purchase."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #0F172A 0%, #D4AF37 100%)" aria-hidden="true">PP</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Prakash Patel</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article>
-                </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-navy border-t border-gray-800 h-screen overflow-y-auto pb-24">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">About Us</a>
+                <a href="properties.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">Properties</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">Contact Us</a>
             </div>
-            
-            <!-- Column 3 (Hidden on Mobile/Tablet) -->
-            <div class="hidden lg:block flex-1 max-w-[420px]">
-                <div class="testimonials-scroll flex flex-col gap-5 pb-5">
-                    <article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"Thanks for securing fully furnished office space for rent in Ahmedabad for my IT Startup. I was a first time business owner who is completely unaware to the leasing process and your experienced leasing agents handled the job with utmost Transparency and Professionalism which made the process seem easy."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #06b6d4 0%, #3E96E4 100%)" aria-hidden="true">RS</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Rahul Singh, Pixielit Studios</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="relative h-[400px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-brand-navy/90 mix-blend-multiply"></div>
+        
+        <div class="relative z-10 text-center px-4 mt-20">
+            <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Client Testimonials</h1>
+            <p class="text-gray-300 text-lg max-w-2xl mx-auto">Success stories and reviews from our valued clients in Ahmedabad.</p>
         </div>
     </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"It was indeed good experience to have the guidance and assistance of these guys, who knows the commercial property market in Ahmedabad very well, pays attention to understand the details of the business needs and provide incredible services."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #f97316 0%, #facc15 100%)" aria-hidden="true">SB</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Sankalp Bhalla, Reliance General Insurance</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"We wanted to thank your marketing team for their excellent work in marketing our Commercial office Space in Ahmedabad. Within 60 days of enrollment with you there were multiple inquiries, including decent offers that culminated in a lease contract with a reputed MNC."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #3E96E4 0%, #0FC26A 100%)" aria-hidden="true">RP</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Riddhi Patel & Jatin Patel</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"After checking with all my business and real estate connections, I choose Sanjay Realty Group to list my office in the Corporate Park. Within over a month period they were able to successfully rent out my commercial property to reputed corporate company for 3 year lease contract. I would say they are the best commercial real estate agents in Ahmedabad."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #0F172A 0%, #D4AF37 100%)" aria-hidden="true">NS</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Nirav Shah, House of Packaging</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"Thanks for securing fully furnished office space for rent in Ahmedabad for my IT Startup. I was a first time business owner who is completely unaware to the leasing process and your experienced leasing agents handled the job with utmost Transparency and Professionalism which made the process seem easy."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #10b981 0%, #059669 100%)" aria-hidden="true">RS</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Rahul Singh, Pixielit Studios</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"It was indeed good experience to have the guidance and assistance of these guys, who knows the commercial property market in Ahmedabad very well, pays attention to understand the details of the business needs and provide incredible services."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)" aria-hidden="true">SB</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Sankalp Bhalla, Reliance General Insurance</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"We wanted to thank your marketing team for their excellent work in marketing our Commercial office Space in Ahmedabad. Within 60 days of enrollment with you there were multiple inquiries, including decent offers that culminated in a lease contract with a reputed MNC."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #06b6d4 0%, #3E96E4 100%)" aria-hidden="true">RP</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Riddhi Patel & Jatin Patel</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article><article class="bg-white border border-[#e2e8f0] rounded-2xl p-6 flex flex-col gap-4 w-full max-w-none shadow-sm">
-    <div class="flex gap-0.5" role="img" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
-    <p class="text-[14px] sm:text-[15px] text-[#374151] leading-relaxed">"After checking with all my business and real estate connections, I choose Sanjay Realty Group to list my office in the Corporate Park. Within over a month period they were able to successfully rent out my commercial property to reputed corporate company for 3 year lease contract. I would say they are the best commercial real estate agents in Ahmedabad."</p>
-    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-[#f1f5f9]">
-        <div class="h-10 w-10 rounded-full flex items-center justify-center text-white text-[15px] font-bold shrink-0 ring-2 ring-white" style="background-image:linear-gradient(135deg, #f97316 0%, #facc15 100%)" aria-hidden="true">NS</div>
-        <div class="min-w-0">
-            <p class="font-semibold text-[14px] text-[#0f172b] truncate">Nirav Shah, House of Packaging</p>
-            <p class="text-[13px] text-[#6b7280] truncate">Happy Client</p>
-        </div>
-    </div>
-</article>
+
+    <!-- Main Content -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-brand-gray border border-[#e2e8f0] rounded-2xl p-8 flex flex-col gap-5 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex gap-0.5 text-amber-500">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm">"We purchased a prime location Property in GIFT City through Sanjay Realty. We believe they are the most helpful and friendly for any kind of property dealing in GIFT City, Gandhinagar. Ms. Rima Doshi has been very professional throughout our dealings."</p>
+                    <div class="flex items-center gap-3 mt-auto pt-4 border-t border-gray-200">
+                        <div class="h-10 w-10 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold shrink-0">SK</div>
+                        <div>
+                            <p class="font-bold text-brand-navy text-sm">Surinder Kumar</p>
+                            <p class="text-gray-400 text-xs">Happy Client</p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-brand-gray border border-[#e2e8f0] rounded-2xl p-8 flex flex-col gap-5 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex gap-0.5 text-amber-500">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm">"I am recommending Sanjay Realty after buying multiple properties from them. They are highly professional and reliable real estate advisors. They have great market insight and seamless service throughout the process."</p>
+                    <div class="flex items-center gap-3 mt-auto pt-4 border-t border-gray-200">
+                        <div class="h-10 w-10 rounded-full bg-violet-600 flex items-center justify-center text-white font-bold shrink-0">CJ</div>
+                        <div>
+                            <p class="font-bold text-brand-navy text-sm">Chetan Jalan</p>
+                            <p class="text-gray-400 text-xs">Happy Client</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-brand-gray border border-[#e2e8f0] rounded-2xl p-8 flex flex-col gap-5 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex gap-0.5 text-amber-500">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm">"Booked 3 flats through Sanjay Realty in GIFT City. They are honest, clear and helpful. I had a great experience working with them and would recommend them to anyone looking to buy property."</p>
+                    <div class="flex items-center gap-3 mt-auto pt-4 border-t border-gray-200">
+                        <div class="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold shrink-0">JS</div>
+                        <div>
+                            <p class="font-bold text-brand-navy text-sm">Jigar Shukal</p>
+                            <p class="text-gray-400 text-xs">Happy Client</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-brand-gray border border-[#e2e8f0] rounded-2xl p-8 flex flex-col gap-5 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex gap-0.5 text-amber-500">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm">"We purchased a prime location Property in Adani Shantigram through Sanjay Realty. Specially Mr. Nitesh Trivedi has been very professional throughout our dealings. We highly recommend this firm."</p>
+                    <div class="flex items-center gap-3 mt-auto pt-4 border-t border-gray-200">
+                        <div class="h-10 w-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold shrink-0">JS</div>
+                        <div>
+                            <p class="font-bold text-brand-navy text-sm">Jigar Shukal</p>
+                            <p class="text-gray-400 text-xs">Happy Client</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="bg-brand-gray border border-[#e2e8f0] rounded-2xl p-8 flex flex-col gap-5 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex gap-0.5 text-amber-500">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm">"After checking with all my business and real estate connections, I chose Sanjay Realty to list my office. Within over a month they were able to successfully rent out my commercial property to a reputed MNC."</p>
+                    <div class="flex items-center gap-3 mt-auto pt-4 border-t border-gray-200">
+                        <div class="h-10 w-10 rounded-full bg-orange-600 flex items-center justify-center text-white font-bold shrink-0">NS</div>
+                        <div>
+                            <p class="font-bold text-brand-navy text-sm">Nirav Shah</p>
+                            <p class="text-gray-400 text-xs">House of Packaging</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="bg-brand-gray border border-[#e2e8f0] rounded-2xl p-8 flex flex-col gap-5 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex gap-0.5 text-amber-500">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm">"Thanks for securing a fully furnished office space for rent in Ahmedabad for my IT Startup. The team handled the leasing process with utmost transparency and professionalism."</p>
+                    <div class="flex items-center gap-3 mt-auto pt-4 border-t border-gray-200">
+                        <div class="h-10 w-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-bold shrink-0">RS</div>
+                        <div>
+                            <p class="font-bold text-brand-navy text-sm">Rahul Singh</p>
+                            <p class="text-gray-400 text-xs">Pixielit Studios</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer-wave bg-brand-navy text-white pt-24 pb-12 mt-10 relative before:absolute before:left-0 before:bottom-full before:w-full before:h-[70px] before:content-[''] before:z-10 before:bg-footer-wave-dark before:bg-[length:100%_100%] before:bg-no-repeat">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12 mb-16">
+                <!-- Brand -->
+                <div class="lg:col-span-1 flex flex-col">
+                    <a href="index.html" class="inline-block mb-8 transition-transform hover:scale-105 origin-left">
+                        <img src="images/logo.png" alt="Sanjay Realty Logo" class="h-14 w-auto object-contain">
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8 pr-4">
+                        Sanjay Realty: A Trusted Name in Real Estate for 30+ Years. We specialize in property buying, selling, and dispute resolution in Ahmedabad.
+                    </p>
+                </div>
+                
+                <!-- Explore Links -->
+                <div>
+                    <h4 class="font-heading text-lg font-bold mb-6 text-white flex items-center">
+                        <span class="w-8 h-1 bg-brand-gold mr-3 rounded-full"></span> Explore
+                    </h4>
+                    <ul class="space-y-3.5">
+                        <li><a href="available-projects.html" class="text-gray-400 hover:text-brand-gold text-sm transition-all hover:translate-x-2 inline-block">Available Projects</a></li>
+                        <li><a href="upcoming-projects.html" class="text-gray-400 hover:text-brand-gold text-sm transition-all hover:translate-x-2 inline-block">Upcoming Projects</a></li>
+                        <li><a href="sold-projects.html" class="text-gray-400 hover:text-brand-gold text-sm transition-all hover:translate-x-2 inline-block">Sold Projects</a></li>
+                        <li><a href="photos.html" class="text-gray-400 hover:text-brand-gold text-sm transition-all hover:translate-x-2 inline-block">Photos</a></li>
+                        <li><a href="videos.html" class="text-gray-400 hover:text-brand-gold text-sm transition-all hover:translate-x-2 inline-block">Videos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading text-lg font-bold mb-6 text-white flex items-center">
+                        <span class="w-8 h-1 bg-brand-gold mr-3 rounded-full"></span> Quick Links
+                    </h4>
+                    <ul class="space-y-3.5">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-gold text-sm transition-all hover:translate-x-2 inline-block">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-brand-gold text-sm transition-all hover:translate-x-2 inline-block">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-brand-gold text-sm transition-all hover:translate-x-2 inline-block">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-heading text-lg font-bold mb-6 text-white flex items-center">
+                        <span class="w-8 h-1 bg-brand-gold mr-3 rounded-full"></span> Contact Us
+                    </h4>
+                    <div class="flex items-start mb-6">
+                        <div class="pt-1">
+                            <h5 class="text-white font-medium text-sm mb-1">Corporate Office</h5>
+                            <p class="text-gray-400 text-sm leading-relaxed">A-903 Sankalp Square III,<br>Near Taj Skyline, Sindhubhavan Road,<br>Ahmedabad, Gujarat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">&copy; 2026 Sanjay Realty. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="privacy-policy.html" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="terms-and-conditions.html" class="text-gray-500 hover:text-white text-sm transition-colors">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

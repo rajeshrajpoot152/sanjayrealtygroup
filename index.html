@@ -63,43 +63,67 @@
     
 
     
+    <style>
+        #navbar-content {
+            height: 7rem; /* 112px */
+            transition: all 0.3s ease-in-out;
+        }
+        #navbar-logo {
+            height: 5.5rem; /* 88px */
+            transition: all 0.3s ease-in-out;
+        }
+        @media (min-width: 768px) {
+            #navbar-content {
+                height: 9rem; /* 144px */
+            }
+            #navbar-logo {
+                height: 7rem; /* 112px */
+            }
+        }
+        .navbar-scrolled #navbar-content {
+            height: 4.5rem; /* 72px */
+        }
+        .navbar-scrolled #navbar-logo {
+            height: 3.25rem; /* 52px */
+        }
+    </style>
 </head>
 <body class="font-sans text-gray-800 bg-brand-gray antialiased selection:bg-brand-gold selection:text-brand-navy overflow-x-hidden">
 
         <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-slate-900/85 backdrop-blur-[12px] border-b border-white/10 transition-all duration-300" id="navbar">
+    <nav class="fixed w-full z-50 bg-transparent border-b border-transparent transition-all duration-300" id="navbar">
         <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-24">
+            <div class="flex justify-between items-center transition-all duration-300" id="navbar-content">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="flex flex-col">
-                        <img src="images/logo.png" alt="Sanjay Realty Logo" class="h-16 w-auto bg-white/90 p-2 rounded">
+                        <img id="navbar-logo" src="images/logo.png" alt="Sanjay Realty Logo" class="w-auto object-contain transition-all duration-300">
                     </a>
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-brand-gold font-medium text-sm tracking-wide transition-colors">Home</a>
-                    <a href="about.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">About Us</a>
+                    <a href="index.html" class="text-white hover:text-brand-gold font-bold text-sm tracking-wide transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">Home</a>
+                    <a href="about.html" class="text-white hover:text-brand-gold font-bold text-sm tracking-wide transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">About Us</a>
                     
                     <!-- Properties Dropdown -->
                     <div class="relative group">
-                        <a href="properties.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors flex items-center">
+                        <a href="properties.html" class="text-white hover:text-brand-gold font-bold text-sm tracking-wide transition-colors flex items-center drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
                             Properties
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </a>
                         <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
                             <div class="py-1">
-                                <a href="available-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Available Projects</a>
+                               <a href="available-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Available Projects</a>
                                 <a href="upcoming-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Upcoming Projects</a>
                                 <a href="sold-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Sold Projects</a>
                             </div>
                         </div>
                     </div>
-
+ 
                     <!-- Gallery Dropdown -->
                     <div class="relative group">
-                        <a href="gallery.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors flex items-center">
+                        <a href="gallery.html" class="text-white hover:text-brand-gold font-bold text-sm tracking-wide transition-colors flex items-center drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
                             Gallery
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </a>
@@ -110,8 +134,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <a href="contact.html" class="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors">Contact Us</a>
+ 
+                    <a href="contact.html" class="text-white hover:text-brand-gold font-bold text-sm tracking-wide transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">Contact Us</a>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -128,29 +152,29 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-brand-navy border-t border-gray-800 h-screen overflow-y-auto pb-24">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 text-brand-gold font-medium">Home</a>
-                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">About Us</a>
+                <a href="index.html" class="block px-3 py-2 text-white hover:text-brand-gold font-bold transition-colors">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-white hover:text-brand-gold font-bold transition-colors">About Us</a>
                 
                 <!-- Properties Mobile (Expanded for simplicity) -->
                 <div class="space-y-1">
-                    <a href="properties.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium flex justify-between items-center">Properties</a>
+                    <a href="properties.html" class="block px-3 py-2 text-white hover:text-brand-gold font-bold flex justify-between items-center transition-colors">Properties</a>
                     <div class="pl-6 space-y-1">
-                        <a href="available-projects.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Available Projects</a>
-                        <a href="upcoming-projects.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Upcoming Projects</a>
-                        <a href="sold-projects.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Sold Projects</a>
+                        <a href="available-projects.html" class="block px-3 py-2 text-white/80 hover:text-brand-gold text-sm transition-colors">Available Projects</a>
+                        <a href="upcoming-projects.html" class="block px-3 py-2 text-white/80 hover:text-brand-gold text-sm transition-colors">Upcoming Projects</a>
+                        <a href="sold-projects.html" class="block px-3 py-2 text-white/80 hover:text-brand-gold text-sm transition-colors">Sold Projects</a>
                     </div>
                 </div>
 
                 <!-- Gallery Mobile -->
                 <div class="space-y-1">
-                    <a href="gallery.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium flex justify-between items-center">Gallery</a>
+                    <a href="gallery.html" class="block px-3 py-2 text-white hover:text-brand-gold font-bold flex justify-between items-center transition-colors">Gallery</a>
                     <div class="pl-6 space-y-1">
-                        <a href="photos.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Photos</a>
-                        <a href="videos.html" class="block px-3 py-2 text-gray-400 hover:text-white text-sm">Videos</a>
+                        <a href="photos.html" class="block px-3 py-2 text-white/80 hover:text-brand-gold text-sm transition-colors">Photos</a>
+                        <a href="videos.html" class="block px-3 py-2 text-white/80 hover:text-brand-gold text-sm transition-colors">Videos</a>
                     </div>
                 </div>
 
-                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-white font-medium">Contact Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-white hover:text-brand-gold font-bold transition-colors">Contact Us</a>
             </div>
         </div>
     </nav>
@@ -161,7 +185,7 @@
         <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
             <source src="video/home-video.mp4" type="video/mp4">
         </video>
-        <div class="absolute inset-0 bg-gradient-to-b from-brand-navy/80 via-brand-navy/60 to-brand-navy/90"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-navy/50 via-brand-navy/20 to-brand-navy/60"></div>
         
         <!-- Content -->
         <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
@@ -175,48 +199,16 @@
             
             <!-- Call to Action -->
             <div class="mt-8 flex justify-center gap-4">
-                <a href="properties.html" class="inline-block bg-brand-gold hover:bg-yellow-600 text-brand-navy px-8 py-4 rounded font-bold text-sm uppercase tracking-wider transition-colors shadow-lg">
+                <a href="properties.html" class="inline-flex items-center justify-center bg-[#33A665] hover:bg-[#2b8f55] text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:-translate-y-0.5 shadow-lg">
                     View Global Parcels
                 </a>
-                <a href="contact.html" class="inline-block bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded font-bold text-sm uppercase tracking-wider transition-colors backdrop-blur-sm">
+                <a href="contact.html" class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm">
                     Contact Us
                 </a>
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-            <span class="text-white/50 text-xs tracking-widest uppercase mb-2">Scroll</span>
-            <div class="w-[1px] h-12 bg-white/30 relative overflow-hidden">
-                <div class="w-full h-1/2 bg-brand-gold absolute top-0 animate-[scrollDown_2s_ease-in-out_infinite]"></div>
-            </div>
-        </div>
     </div>
-
-    <!-- Key Statistics Section -->
-    <section class="py-16 bg-brand-navy border-t border-brand-gold/30 relative overflow-hidden">
-        <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center opacity-5 mix-blend-overlay"></div>
-        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-x-0 lg:divide-x divide-gray-700">
-                <div class="reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 p-4">
-                    <div class="text-4xl md:text-5xl font-bold font-heading text-brand-gold mb-3">500+</div>
-                    <div class="text-sm text-gray-300 uppercase tracking-widest font-semibold">Land Projects</div>
-                </div>
-                <div class="reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 p-4" style="transition-delay: 100ms;">
-                    <div class="text-4xl md:text-5xl font-bold font-heading text-brand-gold mb-3">10,000+</div>
-                    <div class="text-sm text-gray-300 uppercase tracking-widest font-semibold">Acres Land Managed</div>
-                </div>
-                <div class="reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 p-4" style="transition-delay: 200ms;">
-                    <div class="text-4xl md:text-5xl font-bold font-heading text-brand-gold mb-3">3</div>
-                    <div class="text-sm text-gray-300 uppercase tracking-widest font-semibold">Countries Global Presence</div>
-                </div>
-                <div class="reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 p-4" style="transition-delay: 300ms;">
-                    <div class="text-4xl md:text-5xl font-bold font-heading text-brand-gold mb-3">15+</div>
-                    <div class="text-sm text-gray-300 uppercase tracking-widest font-semibold">Years Industry Exp.</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Global Presence Section -->
     <section class="py-24 bg-white relative">
@@ -397,90 +389,12 @@
             </div>
             
             <div class="mt-12 text-center reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0">
-                <a href="contact.html" class="inline-block bg-brand-gold hover:bg-yellow-600 text-brand-navy px-8 py-3 rounded font-bold text-sm uppercase tracking-wider transition-colors">Speak to an NRI Specialist</a>
+                <a href="contact.html" class="inline-flex items-center justify-center bg-[#33A665] hover:bg-[#2b8f55] text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:-translate-y-0.5 shadow-lg">Speak to an NRI Specialist</a>
             </div>
         </div>
     </section>
 
-    <!-- Featured Properties Snippet -->
-    <section class="py-24 bg-brand-gray">
-        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0">
-                <div>
-                    <span class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-2 block">Premium Offerings</span>
-                    <h2 class="font-heading text-4xl font-bold text-brand-navy">Featured Land Parcels</h2>
-                </div>
-                <a href="properties.html" class="mt-4 md:mt-0 text-brand-navy font-semibold hover:text-brand-gold transition-colors flex items-center border-b border-brand-navy hover:border-brand-gold pb-1">
-                    View All Offerings <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Property Card 1 -->
-                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] reveal opacity-0 translate-y-[30px] duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 group">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="images/land-5.jpg" alt="Texas Ranch" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-brand-navy text-white text-xs font-bold px-3 py-1.5 rounded tracking-wide">FOR SALE</div>
-                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded shadow text-brand-navy text-sm font-bold flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-brand-gold"></span> USA
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-brand-gold font-bold text-xl mb-2">$2,450,000</div>
-                        <h3 class="font-heading text-2xl font-bold text-brand-navy mb-3 line-clamp-1">50-Acre Premium Ranch Land</h3>
-                        <p class="text-gray-500 text-sm mb-4 line-clamp-2">Prime development opportunity located just 40 minutes outside Austin, Texas. Flat terrain with highway frontage.</p>
-                        <hr class="border-gray-100 mb-4">
-                        <div class="flex justify-between items-center text-sm font-medium text-gray-600">
-                            <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg> 50 Acres</span>
-                            <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> Texas, USA</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Property Card 2 -->
-                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] reveal opacity-0 translate-y-[30px] duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 group" style="transition-delay: 100ms;">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="images/land-5.jpg" alt="Gujarat Plot" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-brand-navy text-white text-xs font-bold px-3 py-1.5 rounded tracking-wide">FOR SALE</div>
-                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded shadow text-brand-navy text-sm font-bold flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-brand-gold"></span> India
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-brand-gold font-bold text-xl mb-2">₹12,50,00,000</div>
-                        <h3 class="font-heading text-2xl font-bold text-brand-navy mb-3 line-clamp-1">Industrial Estate Plot</h3>
-                        <p class="text-gray-500 text-sm mb-4 line-clamp-2">Strategically located industrial land near Sanand Auto Hub. Fully clear title with NA (Non-Agricultural) clearance.</p>
-                        <hr class="border-gray-100 mb-4">
-                        <div class="flex justify-between items-center text-sm font-medium text-gray-600">
-                            <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg> 5 Acres</span>
-                            <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> Gujarat, IN</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Property Card 3 -->
-                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] reveal opacity-0 translate-y-[30px] duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 group md:hidden lg:block" style="transition-delay: 200ms;">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="images/land-5.jpg" alt="UK Countryside" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-brand-gold text-brand-navy text-xs font-bold px-3 py-1.5 rounded tracking-wide">RESERVED</div>
-                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded shadow text-brand-navy text-sm font-bold flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-brand-gold"></span> UK
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-brand-gold font-bold text-xl mb-2">£850,000</div>
-                        <h3 class="font-heading text-2xl font-bold text-brand-navy mb-3 line-clamp-1">Countryside Estate Plot</h3>
-                        <p class="text-gray-500 text-sm mb-4 line-clamp-2">Idyllic rural land with planning permission for a luxury eco-home in the Cotswolds.</p>
-                        <hr class="border-gray-100 mb-4">
-                        <div class="flex justify-between items-center text-sm font-medium text-gray-600">
-                            <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg> 2.5 Acres</span>
-                            <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> Cotswolds, UK</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Explore Land Opportunities Section -->
     <section class="py-24 bg-[#0a0a0a] text-white overflow-hidden">
@@ -623,9 +537,6 @@
             <p class="text-gray-600 max-w-2xl mx-auto text-lg mb-8">
                 Explore our collection of beautifully designed residential and commercial properties. Browse stunning images showcasing quality construction, modern architecture, and premium spaces.
             </p>
-            <a href="photos.html" class="inline-block bg-brand-gold hover:bg-yellow-600 text-brand-navy px-8 py-3 rounded font-bold text-sm uppercase tracking-wider transition-colors shadow-lg">
-                View All Photos
-            </a>
         </div>
 
         <div class="relative w-full flex flex-col gap-6 group">
@@ -664,6 +575,13 @@
                     <div class="w-72 h-48 md:w-96 md:h-64 flex-shrink-0 rounded-xl overflow-hidden shadow-lg"><img src="images/land-1.jpg" alt="Gallery Image" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"></div>
                 </div>
             </div>
+        </div>
+
+        <!-- View All Photos CTA -->
+        <div class="mt-16 text-center reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0">
+            <a href="photos.html" class="inline-flex items-center justify-center bg-[#33A665] hover:bg-[#2b8f55] text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:-translate-y-0.5 shadow-lg">
+                View All Photos
+            </a>
         </div>
     </section>
 
@@ -957,6 +875,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- View All Testimonials CTA -->
+        <div class="mt-12 text-center reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0">
+            <a href="testimonials.html" class="inline-flex items-center gap-2 bg-[#33A665] hover:bg-[#2b8f55] text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:-translate-y-0.5 shadow-lg">
+                View All Testimonials
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+        </div>
     </section>
 
     <!-- FAQ Section -->
@@ -1029,7 +955,7 @@
         
         <div class="text-center mt-10 reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0">
           <p class="text-gray-500 text-sm mb-4">Still have questions?</p>
-          <a href="contact.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-brand-navy text-brand-navy font-black text-xs sm:text-sm uppercase tracking-widest rounded-full hover:bg-brand-gold hover:border-brand-gold hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-brand-gold/30">Contact Support Team</a>
+          <a href="contact.html" class="inline-flex items-center justify-center bg-[#33A665] hover:bg-[#2b8f55] text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:-translate-y-0.5 shadow-lg">Contact Support Team</a>
         </div>
       </div>
     </section>
@@ -1042,30 +968,27 @@
           <h2 class="font-heading font-black text-white leading-tight mb-6" style="font-size:clamp(2.2rem,5vw,4.5rem);">Ready to Secure Your Global Legacy?</h2>
           <p class="text-gray-300 text-lg sm:text-xl leading-relaxed mb-10 max-w-3xl mx-auto font-medium">Get in touch with our expert real estate advisors. We are here to guide you through every step of your premium land acquisition journey across India, the USA, and the UK.</p>
           <div class="flex justify-center gap-4 sm:gap-6 flex-wrap">
-            <a href="properties.html" class="px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-brand-gold to-yellow-500 text-brand-navy font-black text-sm sm:text-base uppercase tracking-widest rounded-full border border-yellow-400 shadow-xl shadow-brand-gold/20 hover:-translate-y-1 hover:shadow-brand-gold/40 transition-all duration-300">Explore Properties</a>
-            <a href="contact.html" class="px-8 sm:px-12 py-4 sm:py-5 bg-white/10 backdrop-blur-md border border-white/30 text-white font-black text-sm sm:text-base uppercase tracking-widest rounded-full hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold hover:shadow-lg hover:shadow-brand-gold/30 hover:-translate-y-1 transition-all duration-300">Contact Us</a>
+            <a href="properties.html" class="inline-flex items-center justify-center bg-[#33A665] hover:bg-[#2b8f55] text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:-translate-y-0.5 shadow-lg">Explore Properties</a>
+            <a href="contact.html" class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm">Contact Us</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-            <footer class="footer bg-brand-navy text-white pt-24 pb-12 mt-10 relative after:absolute after:left-0 after:bottom-full after:w-full after:h-[70px] after:content-[''] after:z-[-1] after:bg-footer-wave-green after:bg-[length:100%_100%] after:bg-no-repeat before:absolute before:left-0 before:bottom-full before:w-full before:h-[70px] before:content-[''] before:z-10 before:bg-footer-wave-dark before:bg-[length:100%_100%] before:bg-no-repeat">
+    <footer class="footer-wave bg-brand-navy text-white pt-24 pb-12 mt-10 relative before:absolute before:left-0 before:bottom-full before:w-full before:h-[70px] before:content-[''] before:z-10 before:bg-footer-wave-dark before:bg-[length:100%_100%] before:bg-no-repeat">
         <!-- Background decorative elements -->
         <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
         
-        
-        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12 mb-16">
                 <!-- Brand -->
                 <div class="lg:col-span-1 flex flex-col">
-                    <a href="index.html" class="inline-block mb-8 transition-transform hover:scale-105 origin-left">
-                        <div class="bg-white p-3.5 rounded-xl shadow-[0_4px_20px_rgba(255,255,255,0.1)] inline-block">
-                            <img src="images/logo.png" alt="Sanjay Realty Logo" class="h-14 w-auto object-contain">
-                        </div>
+                                        <a href="index.html" class="inline-block mb-8 transition-transform hover:scale-105 origin-left">
+                        <img src="images/logo.png" alt="Sanjay Realty Logo" class="h-14 w-auto object-contain">
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed mb-8 pr-4">
-                        Facilitating premium land acquisitions across India, USA, and UK. Your trusted partner in global real estate legacy building.
+                        Sanjay Realty: A Trusted Name in Real Estate for 30+ Years. We specialize in property buying, selling, and dispute resolution for residential, commercial, and industrial properties in Ahmedabad.
                     </p>
                     <div class="flex flex-wrap gap-3">
                         <!-- Facebook -->
@@ -1093,9 +1016,8 @@
                 
                 <!-- Explore Links -->
                 <div>
-                    <h4 class="font-heading text-lg font-bold mb-6 text-white">
-                        Explore
-                        <span class="block w-12 h-1 mt-2 rounded-full bg-gradient-to-r from-brand-green to-brand-cyan"></span>
+                    <h4 class="font-heading text-lg font-bold mb-6 text-white flex items-center">
+                        <span class="w-8 h-1 bg-brand-gold mr-3 rounded-full"></span> Explore
                     </h4>
                     <ul class="space-y-3.5">
                         <li><a href="available-projects.html" class="text-gray-400 hover:text-brand-gold text-sm transition-all hover:translate-x-2 inline-block">Available Projects</a></li>
@@ -1108,9 +1030,8 @@
 
                 <!-- Quick Links -->
                 <div>
-                    <h4 class="font-heading text-lg font-bold mb-6 text-white">
-                        Quick Links
-                        <span class="block w-12 h-1 mt-2 rounded-full bg-gradient-to-r from-brand-green to-brand-cyan"></span>
+                    <h4 class="font-heading text-lg font-bold mb-6 text-white flex items-center">
+                        <span class="w-8 h-1 bg-brand-gold mr-3 rounded-full"></span> Quick Links
                     </h4>
                     <ul class="space-y-3.5">
                         <li><a href="index.html" class="text-gray-400 hover:text-brand-gold text-sm transition-all hover:translate-x-2 inline-block">Home</a></li>
@@ -1121,9 +1042,8 @@
 
                 <!-- Contact Info -->
                 <div>
-                    <h4 class="font-heading text-lg font-bold mb-6 text-white">
-                        Contact Us
-                        <span class="block w-12 h-1 mt-2 rounded-full bg-gradient-to-r from-brand-green to-brand-cyan"></span>
+                    <h4 class="font-heading text-lg font-bold mb-6 text-white flex items-center">
+                        <span class="w-8 h-1 bg-brand-gold mr-3 rounded-full"></span> Contact Us
                     </h4>
                     
                     <!-- Location -->
@@ -1132,8 +1052,8 @@
                             <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         </div>
                         <div class="pt-1">
-                            <h5 class="text-white font-medium text-sm mb-1">Global Headquarters</h5>
-                            <p class="text-gray-400 text-sm leading-relaxed">Ahmedabad, Gujarat,<br>India.</p>
+                            <h5 class="text-white font-medium text-sm mb-1">Corporate Office</h5>
+                            <p class="text-gray-400 text-sm leading-relaxed">A-903 Sankalp Square III,<br>Near Taj Skyline, Sindhubhavan Road,<br>Ahmedabad, Gujarat.</p>
                         </div>
                     </div>
                     
@@ -1149,7 +1069,6 @@
                                     <h5 class="text-gray-400 font-medium text-[11px] uppercase tracking-wider mb-1">Phone</h5>
                                     <div class="flex flex-col space-y-1">
                                         <a href="tel:+919825020731" class="text-white hover:text-brand-gold transition-colors text-sm font-medium">+91 98250 20731</a>
-                                        <a href="tel:+919825157731" class="text-white hover:text-brand-gold transition-colors text-sm font-medium">+91 98251 57731</a>
                                     </div>
                                 </div>
                             </div>
@@ -1174,7 +1093,7 @@
             </div>
             
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-500 text-sm">&copy; 2026 Sanjay Realty Group. All rights reserved.</p>
+                <p class="text-gray-500 text-sm">&copy; 2026 Sanjay Realty. All rights reserved.</p>
                 <div class="flex space-x-6">
                     <a href="privacy-policy.html" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
                     <a href="terms-and-conditions.html" class="text-gray-500 hover:text-white text-sm transition-colors">Terms and Conditions</a>
@@ -1185,18 +1104,57 @@
 
     <!-- Scripts -->
     <script>
-        // Mobile Menu Toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
+        // Mobile Menu Toggle & Body Scroll Lock
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.getElementById('navbar');
+        const navbarContent = document.getElementById('navbar-content');
+        const navbarLogo = document.getElementById('navbar-logo');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden', !isHidden);
+            
+            // Force solid background when menu is open
+            if (!isHidden) {
+                navbar.classList.add('navbar-scrolled', 'bg-[#001603]/95', 'backdrop-blur-[12px]', 'border-white/10');
+                navbar.classList.remove('bg-transparent', 'border-transparent');
+            } else if (window.scrollY <= 50) {
+                navbar.classList.remove('navbar-scrolled', 'bg-[#001603]/95', 'backdrop-blur-[12px]', 'border-white/10');
+                navbar.classList.add('bg-transparent', 'border-transparent');
+            }
+            
+            // Toggle hamburger icon to X icon
+            if (isHidden) {
+                mobileMenuBtn.innerHTML = `
+                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                `;
+            } else {
+                mobileMenuBtn.innerHTML = `
+                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                `;
+            }
         });
 
-        // Keyframe for scroll indicator
-        tailwind.config.theme.extend.keyframes = {
-            scrollDown: {
-                '0%': { transform: 'translateY(-100%)' },
-                '100%': { transform: 'translateY(200%)' }
+        // Navbar Scroll & Logo Shrink Effect
+        function handleScroll() {
+            const isMenuOpen = !mobileMenu.classList.contains('hidden');
+            if (window.scrollY > 50 || isMenuOpen) {
+                navbar.classList.add('navbar-scrolled', 'bg-[#001603]/95', 'backdrop-blur-[12px]', 'border-white/10');
+                navbar.classList.remove('bg-transparent', 'border-transparent');
+            } else {
+                navbar.classList.remove('navbar-scrolled', 'bg-[#001603]/95', 'backdrop-blur-[12px]', 'border-white/10');
+                navbar.classList.add('bg-transparent', 'border-transparent');
             }
-        };
+        }
+        
+        window.addEventListener('scroll', handleScroll);
+        // Run once on page load
+        handleScroll();
 
         // Scroll animation observer
         const revealElements = document.querySelectorAll('.reveal');
@@ -1230,10 +1188,10 @@
 
     <!-- Floating Enquire Now Button -->
     <div class="fixed right-0 top-1/2 -translate-y-1/2 z-[100]">
-        <a href="contact.html" class="group flex items-center justify-center w-8 md:w-12 h-28 md:h-40 py-2 md:py-4 bg-brand-gold hover:bg-brand-navy rounded-l-lg md:rounded-l-xl shadow-lg transition-all duration-300 translate-x-0 hover:-translate-x-1 border-l-2 border-brand-navy/30">
+        <a href="contact.html" class="group flex items-center justify-center w-8 md:w-12 h-28 md:h-40 py-2 md:py-4 bg-[#33A665] hover:bg-[#001603] rounded-l-lg md:rounded-l-xl shadow-lg transition-all duration-300 translate-x-0 hover:-translate-x-1 border-l-2 border-brand-navy/30">
             <div class="flex flex-col items-center justify-center h-full gap-2 md:gap-3">
-                <svg class="w-4 h-4 md:w-5 md:h-5 text-brand-navy group-hover:text-brand-gold transition-colors duration-300 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-                <span class="[writing-mode:vertical-rl] text-[10px] md:text-[12px] font-heading font-bold tracking-[0.2em] uppercase transform rotate-180 text-brand-navy group-hover:text-brand-gold whitespace-nowrap transition-colors duration-300 pb-2">
+                <svg class="w-4 h-4 md:w-5 md:h-5 text-white group-hover:text-brand-gold transition-colors duration-300 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                <span class="[writing-mode:vertical-rl] text-[10px] md:text-[12px] font-heading font-bold tracking-[0.2em] uppercase transform rotate-180 text-white group-hover:text-brand-gold whitespace-nowrap transition-colors duration-300 pb-2">
                     Enquire Now
                 </span>
             </div>
