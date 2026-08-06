@@ -41,43 +41,14 @@
         }
     </script>
     
-    <style>
-        .glass-nav {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    
 
-    <style>
-        .footer::after {
-            position: absolute;
-            left: 0;
-            bottom: 100%;
-            width: 100%;
-            height: 70px;
-            content: "";
-            z-index: -1;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 100' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C480,100 960,100 1440,0 L1440,100 L0,100 Z' fill='%23001603'/%3E%3C/svg%3E");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-    </style>
+    
 </head>
 <body class="font-sans text-gray-800 bg-brand-gray antialiased selection:bg-brand-gold selection:text-brand-navy overflow-x-hidden">
 
         <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+    <nav class="fixed w-full z-50 bg-slate-900/85 backdrop-blur-[12px] border-b border-white/10 transition-all duration-300" id="navbar">
         <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
                 <!-- Logo -->
@@ -98,7 +69,7 @@
                             Properties
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </a>
-                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
                             <div class="py-1">
                                 <a href="available-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Available Projects</a>
                                 <a href="upcoming-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Upcoming Projects</a>
@@ -113,7 +84,7 @@
                             Gallery
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </a>
-                        <div class="absolute left-0 mt-2 w-32 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
+                        <div class="absolute left-0 mt-2 w-32 bg-white rounded-md shadow-lg invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
                             <div class="py-1">
                                 <a href="photos.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Photos</a>
                                 <a href="videos.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Videos</a>
@@ -181,7 +152,7 @@
         <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 
-                <div class="relative reveal h-[500px] rounded-xl overflow-hidden shadow-2xl">
+                <div class="relative reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 h-[500px] rounded-xl overflow-hidden shadow-2xl">
                     <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
                         <source src="video/office.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -189,7 +160,7 @@
                     <div class="absolute inset-0 bg-brand-navy/10"></div>
                 </div>
 
-                <div class="reveal">
+                <div class="reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0">
                     <span class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4 block">Established 2004</span>
                     <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6 text-brand-navy leading-tight">Your Trusted Advisors in Global Land Sales</h2>
                     <p class="text-gray-600 text-lg mb-6 leading-relaxed">
@@ -218,27 +189,27 @@
     <!-- Mission & Values -->
     <section class="py-24 bg-brand-navy text-white">
         <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 reveal">
+            <div class="text-center mb-16 reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0">
                 <h2 class="font-heading text-4xl font-bold text-white mb-4">Our Core Values</h2>
                 <div class="w-24 h-1 bg-brand-gold mx-auto"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="reveal text-center">
+                <div class="reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 text-center">
                     <div class="w-16 h-16 rounded-full bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold mx-auto mb-6">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
                     <h3 class="text-2xl font-heading font-bold mb-4">Integrity & Transparency</h3>
                     <p class="text-gray-400">Complete transparency in legal due diligence and pricing. No hidden fees, no obscured risks.</p>
                 </div>
-                <div class="reveal text-center" style="transition-delay: 100ms;">
+                <div class="reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 text-center" style="transition-delay: 100ms;">
                     <div class="w-16 h-16 rounded-full bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold mx-auto mb-6">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <h3 class="text-2xl font-heading font-bold mb-4">Global Network</h3>
                     <p class="text-gray-400">Leveraging deep relationships with local governments and developers in India, USA, and the UK.</p>
                 </div>
-                <div class="reveal text-center" style="transition-delay: 200ms;">
+                <div class="reveal opacity-0 translate-y-[30px] transition-all duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 text-center" style="transition-delay: 200ms;">
                     <div class="w-16 h-16 rounded-full bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold mx-auto mb-6">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                     </div>
@@ -250,7 +221,7 @@
     </section>
 
     <!-- Footer -->
-            <footer class="footer bg-brand-navy text-white pt-24 pb-12 mt-10 relative">
+            <footer class="footer bg-brand-navy text-white pt-24 pb-12 mt-10 relative after:absolute after:left-0 after:bottom-full after:w-full after:h-[70px] after:content-[''] after:z-[-1] after:bg-[url('data:image/svg+xml,%3Csvg_viewBox=%270_0_1440_100%27_xmlns=%27http://www.w3.org/2000/svg%27_preserveAspectRatio=%27none%27%3E%3Cpath_d=%27M0,0_C480,100_960,100_1440,0_L1440,100_L0,100_Z%27_fill=%27%23001603%27/%3E%3C/svg%3E')] after:bg-[length:100%_100%] after:bg-no-repeat before:absolute before:left-0 before:bottom-full before:w-full before:h-[70px] before:content-[''] before:z-10 before:bg-[url('data:image/svg+xml,%3Csvg_viewBox=%270_0_1440_100%27_xmlns=%27http://www.w3.org/2000/svg%27_preserveAspectRatio=%27none%27%3E%3Cpath_d=%27M0,0_C480,100_960,100_1440,0_L1440,100_L0,100_Z%27_fill=%27%230F172A%27/%3E%3C/svg%3E')] before:bg-[length:100%_100%] before:bg-no-repeat">
         <!-- Background decorative elements -->
         <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
         

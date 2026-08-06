@@ -41,50 +41,14 @@
         }
     </script>
     
-    <style>
-        .glass-nav {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .hover-lift {
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .hover-lift:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
-        }
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    
 
-    <style>
-        .footer::after {
-            position: absolute;
-            left: 0;
-            bottom: 100%;
-            width: 100%;
-            height: 70px;
-            content: "";
-            z-index: -1;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 100' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C480,100 960,100 1440,0 L1440,100 L0,100 Z' fill='%23001603'/%3E%3C/svg%3E");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-    </style>
+    
 </head>
 <body class="font-sans text-gray-800 bg-brand-gray antialiased selection:bg-brand-gold selection:text-brand-navy overflow-x-hidden">
 
         <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+    <nav class="fixed w-full z-50 bg-slate-900/85 backdrop-blur-[12px] border-b border-white/10 transition-all duration-300" id="navbar">
         <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
                 <!-- Logo -->
@@ -105,7 +69,7 @@
                             Properties
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </a>
-                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
                             <div class="py-1">
                                 <a href="available-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Available Projects</a>
                                 <a href="upcoming-projects.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Upcoming Projects</a>
@@ -120,7 +84,7 @@
                             Gallery
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </a>
-                        <div class="absolute left-0 mt-2 w-32 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
+                        <div class="absolute left-0 mt-2 w-32 bg-white rounded-md shadow-lg invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 z-50 overflow-hidden">
                             <div class="py-1">
                                 <a href="photos.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Photos</a>
                                 <a href="videos.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gray hover:text-brand-gold">Videos</a>
@@ -194,7 +158,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Card: Kamiyana -->
-                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden hover-lift reveal group">
+                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] reveal opacity-0 translate-y-[30px] duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 group">
                     <div class="relative h-64 overflow-hidden bg-brand-emerald">
                         <!-- Use placeholder style land image if specific one is not uploaded. For now using a general lush green land picture similar to the circular image in the ad -->
                         <img src="images/land-5.jpg" alt="Kamiyana Land" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
@@ -217,7 +181,7 @@
                 </div>
 
                 <!-- Card: Hebatpur/Dholera -->
-                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden hover-lift reveal group" style="transition-delay: 100ms;">
+                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] reveal opacity-0 translate-y-[30px] duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 group" style="transition-delay: 100ms;">
                     <div class="relative h-64 overflow-hidden bg-brand-goldlight">
                         <img src="images/land-5.jpg" alt="Hebatpur Dholera Land" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute top-4 right-4 bg-brand-navy text-white text-xs font-bold px-3 py-1.5 rounded tracking-wide">FOR SALE</div>
@@ -239,7 +203,7 @@
                 </div>
 
                 <!-- Card: USA -->
-                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden hover-lift reveal group">
+                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] reveal opacity-0 translate-y-[30px] duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 group">
                     <div class="relative h-64 overflow-hidden">
                         <img src="images/land-5.jpg" alt="Texas Ranch" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute top-4 right-4 bg-brand-navy text-white text-xs font-bold px-3 py-1.5 rounded tracking-wide">FOR SALE</div>
@@ -261,7 +225,7 @@
                 </div>
 
                 <!-- Card: India -->
-                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden hover-lift reveal group" style="transition-delay: 100ms;">
+                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] reveal opacity-0 translate-y-[30px] duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 group" style="transition-delay: 100ms;">
                     <div class="relative h-64 overflow-hidden">
                         <img src="images/land-5.jpg" alt="Gujarat Plot" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute top-4 right-4 bg-brand-navy text-white text-xs font-bold px-3 py-1.5 rounded tracking-wide">FOR SALE</div>
@@ -283,7 +247,7 @@
                 </div>
 
                 <!-- Card: UK -->
-                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden hover-lift reveal group" style="transition-delay: 200ms;">
+                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] reveal opacity-0 translate-y-[30px] duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 group" style="transition-delay: 200ms;">
                     <div class="relative h-64 overflow-hidden">
                         <img src="images/land-5.jpg" alt="UK Countryside" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute top-4 right-4 bg-brand-gold text-brand-navy text-xs font-bold px-3 py-1.5 rounded tracking-wide">RESERVED</div>
@@ -305,7 +269,7 @@
                 </div>
 
                 <!-- Card: India 2 -->
-                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden hover-lift reveal group">
+                <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] reveal opacity-0 translate-y-[30px] duration-[800ms] ease-out [&.active]:opacity-100 [&.active]:translate-y-0 group">
                     <div class="relative h-64 overflow-hidden">
                         <img src="images/land-5.jpg" alt="Maharashtra Plot" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute top-4 right-4 bg-brand-navy text-white text-xs font-bold px-3 py-1.5 rounded tracking-wide">FOR SALE</div>
@@ -344,7 +308,7 @@
     </section>
 
     <!-- Footer -->
-            <footer class="footer bg-brand-navy text-white pt-24 pb-12 mt-10 relative">
+            <footer class="footer bg-brand-navy text-white pt-24 pb-12 mt-10 relative after:absolute after:left-0 after:bottom-full after:w-full after:h-[70px] after:content-[''] after:z-[-1] after:bg-[url('data:image/svg+xml,%3Csvg_viewBox=%270_0_1440_100%27_xmlns=%27http://www.w3.org/2000/svg%27_preserveAspectRatio=%27none%27%3E%3Cpath_d=%27M0,0_C480,100_960,100_1440,0_L1440,100_L0,100_Z%27_fill=%27%23001603%27/%3E%3C/svg%3E')] after:bg-[length:100%_100%] after:bg-no-repeat before:absolute before:left-0 before:bottom-full before:w-full before:h-[70px] before:content-[''] before:z-10 before:bg-[url('data:image/svg+xml,%3Csvg_viewBox=%270_0_1440_100%27_xmlns=%27http://www.w3.org/2000/svg%27_preserveAspectRatio=%27none%27%3E%3Cpath_d=%27M0,0_C480,100_960,100_1440,0_L1440,100_L0,100_Z%27_fill=%27%230F172A%27/%3E%3C/svg%3E')] before:bg-[length:100%_100%] before:bg-no-repeat">
         <!-- Background decorative elements -->
         <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
         
