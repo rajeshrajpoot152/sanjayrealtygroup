@@ -87,7 +87,7 @@
 <body class="font-sans text-[15px] text-[#2b2b2b] font-light leading-[26px] tracking-[0.5px] antialiased text-gray-800 bg-brand-gray selection:bg-brand-gold selection:text-brand-navy overflow-x-hidden">
 
         <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-transparent border-b border-transparent transition-all duration-300" id="navbar">
+    <nav class="fixed top-0 left-0 right-0 mx-auto mt-4 w-[calc(100%-2rem)] max-w-[1536px] rounded-full z-50 bg-transparent border border-transparent transition-all duration-500" id="navbar">
         <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center transition-all duration-300" id="navbar-content">
                 <!-- Logo -->
@@ -1100,10 +1100,10 @@
             
             // Force solid background when menu is open
             if (!isHidden) {
-                navbar.classList.add('navbar-scrolled', 'bg-[#001603]/95', 'backdrop-blur-[12px]', 'border-white/10');
+                navbar.classList.add('navbar-scrolled', 'bg-[#001603]/85', 'backdrop-blur-[12px]', 'border-white/10', 'shadow-lg');
                 navbar.classList.remove('bg-transparent', 'border-transparent');
             } else if (window.scrollY <= 50) {
-                navbar.classList.remove('navbar-scrolled', 'bg-[#001603]/95', 'backdrop-blur-[12px]', 'border-white/10');
+                navbar.classList.remove('navbar-scrolled', 'bg-[#001603]/85', 'backdrop-blur-[12px]', 'border-white/10', 'shadow-lg');
                 navbar.classList.add('bg-transparent', 'border-transparent');
             }
             
@@ -1127,10 +1127,10 @@
         function handleScroll() {
             const isMenuOpen = !mobileMenu.classList.contains('hidden');
             if (window.scrollY > 50 || isMenuOpen) {
-                navbar.classList.add('navbar-scrolled', 'bg-[#001603]/95', 'backdrop-blur-[12px]', 'border-white/10');
+                navbar.classList.add('navbar-scrolled', 'bg-[#001603]/85', 'backdrop-blur-[12px]', 'border-white/10', 'shadow-lg');
                 navbar.classList.remove('bg-transparent', 'border-transparent');
             } else {
-                navbar.classList.remove('navbar-scrolled', 'bg-[#001603]/95', 'backdrop-blur-[12px]', 'border-white/10');
+                navbar.classList.remove('navbar-scrolled', 'bg-[#001603]/85', 'backdrop-blur-[12px]', 'border-white/10', 'shadow-lg');
                 navbar.classList.add('bg-transparent', 'border-transparent');
             }
         }
