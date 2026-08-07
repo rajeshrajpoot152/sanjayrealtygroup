@@ -60,6 +60,23 @@
 
     
     <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            color: #2b2b2b;
+            font-weight: 300;
+            line-height: 26px;
+            letter-spacing: 0.5px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #F8FAFC;
+            overflow-x: hidden;
+        }
+        body ::selection {
+            background-color: #27B9F2;
+            color: #001603;
+        }
+        
         #navbar-content {
             height: 7.6rem; /* 122px */
             transition: all 0.3s ease-in-out;
@@ -84,7 +101,7 @@
         }
     </style>
 </head>
-<body class="font-sans text-[15px] text-[#2b2b2b] font-light leading-[26px] tracking-[0.5px] antialiased text-gray-800 bg-brand-gray selection:bg-brand-gold selection:text-brand-navy overflow-x-hidden">
+<body>
 
         <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 mx-auto w-[calc(100%-2rem)] max-w-[1536px] rounded-full z-50 bg-transparent border border-transparent transition-all duration-500" id="navbar">
