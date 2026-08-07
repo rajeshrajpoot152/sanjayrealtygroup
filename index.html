@@ -1147,11 +1147,11 @@
             
             // Force solid background when menu is open
             if (!isHidden) {
-                navbar.classList.add('navbar-scrolled', 'bg-[#001603]/85', 'backdrop-blur-[12px]', 'border-white/10', 'shadow-lg');
-                navbar.classList.remove('bg-transparent', 'border-transparent');
+                navbar.classList.add('navbar-scrolled', 'bg-[#001603]/85', 'backdrop-blur-[12px]', 'border-white/10', 'shadow-lg', 'top-3');
+                navbar.classList.remove('bg-transparent', 'border-transparent', 'top-0');
             } else if (window.scrollY <= 50) {
-                navbar.classList.remove('navbar-scrolled', 'bg-[#001603]/85', 'backdrop-blur-[12px]', 'border-white/10', 'shadow-lg');
-                navbar.classList.add('bg-transparent', 'border-transparent');
+                navbar.classList.remove('navbar-scrolled', 'bg-[#001603]/85', 'backdrop-blur-[12px]', 'border-white/10', 'shadow-lg', 'top-3');
+                navbar.classList.add('bg-transparent', 'border-transparent', 'top-0');
             }
             
             // Toggle hamburger icon to X icon
@@ -1174,11 +1174,11 @@
         function handleScroll() {
             const isMenuOpen = !mobileMenu.classList.contains('hidden');
             if (window.scrollY > 50 || isMenuOpen) {
-                navbar.classList.add('navbar-scrolled', 'bg-[#001603]/85', 'backdrop-blur-[12px]', 'border-white/10', 'shadow-lg');
-                navbar.classList.remove('bg-transparent', 'border-transparent');
+                navbar.classList.add('navbar-scrolled', 'bg-[#001603]/85', 'backdrop-blur-[12px]', 'border-white/10', 'shadow-lg', 'top-3');
+                navbar.classList.remove('bg-transparent', 'border-transparent', 'top-0');
             } else {
-                navbar.classList.remove('navbar-scrolled', 'bg-[#001603]/85', 'backdrop-blur-[12px]', 'border-white/10', 'shadow-lg');
-                navbar.classList.add('bg-transparent', 'border-transparent');
+                navbar.classList.remove('navbar-scrolled', 'bg-[#001603]/85', 'backdrop-blur-[12px]', 'border-white/10', 'shadow-lg', 'top-3');
+                navbar.classList.add('bg-transparent', 'border-transparent', 'top-0');
             }
         }
         
