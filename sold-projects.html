@@ -217,18 +217,20 @@
     </section>
 
     <!-- Footer -->
-                <footer class="footer-wave bg-brand-navy text-white pt-24 pb-12 mt-10 relative before:absolute before:left-0 before:bottom-full before:w-full before:h-[70px] before:content-[''] before:z-10 before:bg-footer-wave-dark before:bg-[length:100%_100%] before:bg-no-repeat">
+                <footer class="footer-wave bg-brand-navy text-white pt-8 lg:pt-32 pb-12 mt-10 relative before:absolute before:left-0 before:bottom-full before:-mb-[1px] before:w-full before:h-[70px] before:content-[''] before:z-10 before:bg-footer-wave-dark before:bg-[length:100%_100%] before:bg-no-repeat">
         <!-- Background decorative elements -->
-        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+        </div>
         
         <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12 mb-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16">
                 <!-- Brand -->
-                <div class="lg:col-span-1 flex flex-col">
-                                        <a href="index.html" class="inline-block mb-8 transition-transform hover:scale-105 origin-left">
+                <div class="sm:col-span-2 lg:col-span-1 flex flex-col">
+                                        <a href="index.html" class="inline-block mb-8 transition-transform hover:scale-105 origin-center lg:origin-center lg:origin-left self-center lg:self-start">
                         <img src="images/logo.png" alt="Sanjay Realty Logo" class="h-24 w-auto object-contain">
                     </a>
-                    <p class="text-gray-400 leading-relaxed mb-8 pr-4 text-[#343a40] text-[16px]">
+                    <p class="text-gray-300 leading-relaxed mb-8 pr-4 text-sm md:text-[15px]">
                         Sanjay Realty: A Trusted Name in Real Estate for 30+ Years. We specialize in property buying, selling, and dispute resolution for residential, commercial, and industrial properties in Ahmedabad.
                     </p>
                     <div class="flex flex-wrap gap-3">
@@ -256,7 +258,7 @@
                 </div>
                 
                 <!-- Explore Links -->
-                <div>
+                <div class="sm:col-span-1 flex flex-col items-start">
                     <h4 class="text-lg font-bold mb-6 text-white flex flex-col items-start">
                         Explore <span class="w-8 h-1 bg-brand-gold mt-2 rounded-full"></span>
                     </h4>
@@ -270,7 +272,7 @@
                 </div>
 
                 <!-- Quick Links -->
-                <div>
+                <div class="sm:col-span-1 flex flex-col items-start">
                     <h4 class="text-lg font-bold mb-6 text-white flex flex-col items-start">
                         Quick Links <span class="w-8 h-1 bg-brand-gold mt-2 rounded-full"></span>
                     </h4>
@@ -282,7 +284,7 @@
                 </div>
 
                 <!-- Contact Info -->
-                <div>
+                <div class="sm:col-span-2 lg:col-span-1 flex flex-col items-start">
                     <h4 class="text-lg font-bold mb-6 text-white flex flex-col items-start">
                         Contact Us <span class="w-8 h-1 bg-brand-gold mt-2 rounded-full"></span>
                     </h4>
@@ -294,7 +296,7 @@
                         </div>
                         <div class="pt-1">
                             <h5 class="text-white font-medium text-sm mb-1">Corporate Office</h5>
-                            <p class="text-gray-400 leading-relaxed text-[#343a40] text-[16px]">A-903 Sankalp Square III,<br>Near Taj Skyline, Sindhubhavan Road,<br>Ahmedabad, Gujarat.</p>
+                            <p class="text-gray-300 leading-relaxed text-sm md:text-[15px]">A-903 Sankalp Square III,<br>Near Taj Skyline, Sindhubhavan Road,<br>Ahmedabad, Gujarat.</p>
                         </div>
                     </div>
                     
@@ -334,7 +336,7 @@
             </div>
             
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-500 text-[#343a40] text-[16px]">&copy; 2026 Sanjay Realty. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">&copy; 2026 Sanjay Realty. All rights reserved.</p>
                 <div class="flex space-x-6">
                     <a href="privacy-policy.html" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
                     <a href="terms-and-conditions.html" class="text-gray-500 hover:text-white text-sm transition-colors">Terms and Conditions</a>
